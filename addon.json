@@ -1,0 +1,14 @@
+{
+    "legacy_addon_id": "",
+    "title": "[AP] Minimum Characters for Post Count",
+    "description": "Only increases post count if the message length is greater than certain number.",
+    "version_id": 1000000,
+    "version_string": "1.0.0",
+    "dev": "apathy",
+    "dev_url": "https://fortreeforums.xyz/",
+    "faq_url": "",
+    "support_url": "",
+    "extra_urls": [],
+    "require": [],
+    "icon": "icon.png"
+}

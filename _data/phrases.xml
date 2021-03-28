@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+  <phrase title="option_group.ap_min_chars" version_id="1000000" version_string="1.0.0"><![CDATA[[AP] Minimum Characters for Post Count]]></phrase>
+  <phrase title="option_group_description.ap_min_chars" version_id="1000000" version_string="1.0.0"><![CDATA[Settings for the Minimum Characters for Post Count addon by apathy.]]></phrase>
+  <phrase title="option.ap_char_limit" version_id="1000000" version_string="1.0.0"><![CDATA[Character count]]></phrase>
+  <phrase title="option_explain.ap_char_limit" version_id="1000000" version_string="1.0.0"><![CDATA[You can specify the desired character count here. Enter <b>0</b> to disable.]]></phrase>
+</phrases>

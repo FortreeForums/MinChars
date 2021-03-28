@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<options>
+  <option option_id="ap_char_limit" edit_format="textbox" data_type="string">
+    <default_value>75</default_value>
+    <relation group_id="ap_min_chars" display_order="1"/>
+  </option>
+</options>
