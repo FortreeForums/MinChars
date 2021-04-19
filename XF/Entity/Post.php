@@ -16,17 +16,26 @@ class Post extends XFCP_Post
 			$options = \XF::options();
 			$message = $this->message;
 
-			/* Strip BBCode tags to stop inflation */		
-			$message = preg_replace('#\[[^]]*\]#', '', $message);
+			if(!$options->ap_bbcode_check)
+			{
+				/* Strip BBCode tags to stop inflation */	
+				$message = preg_replace('#\[[^]]*\]#', '', $message);
+			}
 			
-			/* Strip URLs to stop inflation */
-			/* Regex found on Github */
-			/* https://gist.github.com/madeinnordeste/e071857148084da94891 */
-			$message = preg_replace('/\b((https?|ftp|file):\/\/|www\.)[-A-Z0-9+&@#\/%?=~_|$!:,.;]*[A-Z0-9+&@#\/%=~_|$]/i', '', $message);
+			if(!$options->ap_url_check)
+			{
+				/* Strip URLs to stop inflation */
+				/* Regex found on Github */
+				/* https://gist.github.com/madeinnordeste/e071857148084da94891 */
+				$message = preg_replace('/\b((https?|ftp|file):\/\/|www\.)[-A-Z0-9+&@#\/%?=~_|$!:,.;]*[A-Z0-9+&@#\/%=~_|$]/i', '', $message);
+			}
 			
-			/* Strip newlines to stop inflation */
-			$message = preg_replace('/(\s)*/', '', $message);
-			
+			if(!$options->ap_newline_check)
+			{
+				/* Strip newlines to stop inflation */
+				$message = preg_replace('/(\s)*/', '', $message);
+			}
+						
 			/* Finally count the characters */
 			$chars = strlen($message);
 
