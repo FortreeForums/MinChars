@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <phrases>
+  <phrase title="option.ap_bbcode_check" version_id="1010070" version_string="1.1.0"><![CDATA[BBCode]]></phrase>
+  <phrase title="option.ap_char_limit" version_id="1000000" version_string="1.0.0"><![CDATA[Character count]]></phrase>
+  <phrase title="option.ap_newline_check" version_id="1010070" version_string="1.1.0"><![CDATA[Linebreaks]]></phrase>
+  <phrase title="option.ap_url_check" version_id="1010070" version_string="1.1.0"><![CDATA[URLs]]></phrase>
+  <phrase title="option_explain.ap_bbcode_check" version_id="1010070" version_string="1.1.0"><![CDATA[Check this if you would like to exclude BBCode tags from counting towards the check]]></phrase>
+  <phrase title="option_explain.ap_char_limit" version_id="1000000" version_string="1.0.0"><![CDATA[You can specify the desired character count here. Enter <b>0</b> to disable.]]></phrase>
+  <phrase title="option_explain.ap_newline_check" version_id="1010070" version_string="1.1.0"><![CDATA[Check this if you would like to exclude linebreaks from counting towards the check.]]></phrase>
+  <phrase title="option_explain.ap_url_check" version_id="1010070" version_string="1.1.0"><![CDATA[Check this if you would like to exclude URLs from counting towards the check]]></phrase>
   <phrase title="option_group.ap_min_chars" version_id="1000000" version_string="1.0.0"><![CDATA[[AP] Minimum Characters for Post Count]]></phrase>
   <phrase title="option_group_description.ap_min_chars" version_id="1000000" version_string="1.0.0"><![CDATA[Settings for the Minimum Characters for Post Count addon by apathy.]]></phrase>
-  <phrase title="option.ap_char_limit" version_id="1000000" version_string="1.0.0"><![CDATA[Character count]]></phrase>
-  <phrase title="option_explain.ap_char_limit" version_id="1000000" version_string="1.0.0"><![CDATA[You can specify the desired character count here. Enter <b>0</b> to disable.]]></phrase>
 </phrases>

@@ -47,3 +47,4 @@ class Post extends XFCP_Post
 		}
 	}
 }
+
