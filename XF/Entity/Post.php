@@ -15,6 +15,14 @@ class Post extends XFCP_Post
 		{
 			$options = \XF::options();
 			$message = $this->message;
+			
+			if($options->ap_quote_check)
+			{
+				/* Strip quoted text to stop inflation */
+				/* Regex found on StackOverflow */
+				/* https://stackoverflow.com/a/7208743 */
+				$message = preg_replace('/\[quote=(.*?)\](((?R)|.*?)+)\[\/quote\]/is', '', $message);
+			}
 
 			if($options->ap_bbcode_check)
 			{

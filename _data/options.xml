@@ -2,18 +2,22 @@
 <options>
   <option option_id="ap_bbcode_check" edit_format="onoff" data_type="boolean">
     <default_value>1</default_value>
-    <relation group_id="ap_min_chars" display_order="1"/>
+    <relation group_id="ap_min_chars" display_order="2"/>
   </option>
   <option option_id="ap_char_limit" edit_format="textbox" data_type="string">
     <default_value>75</default_value>
-    <relation group_id="ap_min_chars" display_order="4"/>
+    <relation group_id="ap_min_chars" display_order="5"/>
   </option>
   <option option_id="ap_newline_check" edit_format="onoff" data_type="boolean">
     <default_value>1</default_value>
     <relation group_id="ap_min_chars" display_order="3"/>
   </option>
+  <option option_id="ap_quote_check" edit_format="onoff" data_type="boolean">
+    <default_value>1</default_value>
+    <relation group_id="ap_min_chars" display_order="1"/>
+  </option>
   <option option_id="ap_url_check" edit_format="onoff" data_type="boolean">
     <default_value>1</default_value>
-    <relation group_id="ap_min_chars" display_order="2"/>
+    <relation group_id="ap_min_chars" display_order="4"/>
   </option>
 </options>
