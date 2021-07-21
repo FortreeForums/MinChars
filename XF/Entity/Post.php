@@ -6,6 +6,8 @@ use XF\Mvc\Entity\Structure;
 
 class Post extends XFCP_Post
 {
+	protected $chars;
+	
 	protected function adjustUserMessageCountIfNeeded($amount)
 	{
 		$options = \XF::options();
@@ -22,7 +24,7 @@ class Post extends XFCP_Post
 			if(in_array($this->Thread->node_id, $excludedForums) 
 			|| in_array($this->user_id, $excludedUsers))
 			{
-				$chars = $options->ap_char_limit;
+				$this->chars = $options->ap_char_limit;
 			}
 			else
 			{
@@ -55,16 +57,15 @@ class Post extends XFCP_Post
 				}
 						
 				/* Finally count the characters */
-				$chars = strlen($message);
+				$this->chars = strlen($message);
 			}
 		}
 		
 		/* Only update if message is greater than X chars */
-		if($chars >= $options->ap_char_limit)
+		if($this->chars >= $options->ap_char_limit)
 		{
 			$this->User->fastUpdate('message_count', max(0, $this->User->message_count + $amount));
 		}
 		
 	}
 }
-
