@@ -2,11 +2,15 @@
 <phrases>
   <phrase title="option.ap_bbcode_check" version_id="1010070" version_string="1.1.0"><![CDATA[BBCode]]></phrase>
   <phrase title="option.ap_char_limit" version_id="1000000" version_string="1.0.0"><![CDATA[Character count]]></phrase>
+  <phrase title="option.ap_minchars_exclude_nodes" version_id="1010170" version_string="1.1.1"><![CDATA[Exclude nodes from check]]></phrase>
+  <phrase title="option.ap_minchars_exclude_users" version_id="1010270" version_string="1.1.2"><![CDATA[Exclude users from check]]></phrase>
   <phrase title="option.ap_newline_check" version_id="1010070" version_string="1.1.0"><![CDATA[Linebreaks]]></phrase>
   <phrase title="option.ap_quote_check" version_id="1010070" version_string="1.1.0"><![CDATA[Quoted text]]></phrase>
   <phrase title="option.ap_url_check" version_id="1010070" version_string="1.1.0"><![CDATA[URLs]]></phrase>
   <phrase title="option_explain.ap_bbcode_check" version_id="1010070" version_string="1.1.0"><![CDATA[Check this if you would like to exclude BBCode tags from counting towards the check]]></phrase>
   <phrase title="option_explain.ap_char_limit" version_id="1000000" version_string="1.0.0"><![CDATA[You can specify the desired character count here. Enter <b>0</b> to disable.]]></phrase>
+  <phrase title="option_explain.ap_minchars_exclude_nodes" version_id="1010170" version_string="1.1.1"><![CDATA[If you would like to exclude boards from counting towards the character check, you can select them here.]]></phrase>
+  <phrase title="option_explain.ap_minchars_exclude_users" version_id="1010270" version_string="1.1.2"><![CDATA[You can input user IDs here in a comma-separated format to exclude them from being checked.]]></phrase>
   <phrase title="option_explain.ap_newline_check" version_id="1010070" version_string="1.1.0"><![CDATA[Check this if you would like to exclude linebreaks from counting towards the check.]]></phrase>
   <phrase title="option_explain.ap_quote_check" version_id="1010070" version_string="1.1.0"><![CDATA[Check this if you would like to exclude text within [quote] tags from counting towards the check]]></phrase>
   <phrase title="option_explain.ap_url_check" version_id="1010070" version_string="1.1.0"><![CDATA[Check this if you would like to exclude URLs from counting towards the check]]></phrase>
