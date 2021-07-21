@@ -9,15 +9,18 @@ class Post extends XFCP_Post
 	protected function adjustUserMessageCountIfNeeded($amount)
 	{
 		$options = \XF::options();
-		$forums = $options->ap_minchars_exclude_nodes;
 		
 		if ($this->user_id
-			&& $this->User
-			&& $this->Thread->discussion_state == 'visible')
+		&& $this->User
+		&& $this->Thread->discussion_state == 'visible')
 		{
+			$excludedForums = $options->ap_minchars_exclude_nodes;
+			$user_ids = $options->ap_minchars_exclude_users;
+			$excludedUsers = explode(",", $user_ids);
 			$message = $this->message;
 			
-			if(in_array($this->Thread->node_id, $forums))
+			if(in_array($this->Thread->node_id, $excludedForums) 
+			|| in_array($this->user_id, $excludedUsers))
 			{
 				$chars = $options->ap_char_limit;
 			}
