@@ -8,20 +8,20 @@
 //  https://fortreeforums.xyz
 //  Licensed under GPL-3.0-or-later 2021
 //
-//  This file is part of [AP] Activity/Longevity Meters ("ActLong").
+//  This file is part of [AP] Minimum Characters for Post Count ("MinChars").
 //
-//  ActLong is free software: you can redistribute it and/or modify
+//  MinChars is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
 //  the Free Software Foundation, either version 3 of the License, or
 //  (at your option) any later version.
 //
-//  ActLong is distributed in the hope that it will be useful,
+//  MinChars is distributed in the hope that it will be useful,
 //  but WITHOUT ANY WARRANTY; without even the implied warranty of
 //  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 //  GNU General Public License for more details.
 //
 //  You should have received a copy of the GNU General Public License
-//  along with ActLong.  If not, see <https://www.gnu.org/licenses/>.
+//  along with MinChars.  If not, see <https://www.gnu.org/licenses/>.
 
 namespace apathy\MinChars\XF\Entity;
 
@@ -82,14 +82,13 @@ class Post extends XFCP_Post
 				/* Finally count the characters */
 				$this->chars = strlen($message);
 			}
+			
+			/* Only update if message is greater than X chars */
+			if($this->chars >= $options->ap_char_limit)
+			{
+				$this->User->fastUpdate('message_count', max(0, $this->User->message_count + $amount));
+			}	
 		}
-		
-		/* Only update if message is greater than X chars */
-		if($this->chars >= $options->ap_char_limit)
-		{
-			$this->User->fastUpdate('message_count', max(0, $this->User->message_count + $amount));
-		}
-		
 	}
 }
 
